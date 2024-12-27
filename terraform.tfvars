@@ -1,0 +1,11 @@
+region_name_1          = "us-west-2"
+region_name_2          = "us-east-1"
+vpc_cidr_block_1       = "172.16.0.0/16"
+vpc_cidr_block_2       = "168.192.0.0/16"
+public_cidr            = "0.0.0.0/0"
+port_number            = ["80", "443", "0"]
+mycount                = 2
+public_subnet_cidrs_1  = ["172.16.1.0/24", "172.16.3.0/24"]
+public_subnet_cidrs_2  = ["168.192.1.0/24", "168.192.2.0/24"]
+private_subnet_cidrs_1 = ["172.16.5.0/24", "172.16.9.0/24"]
+private_subnet_cidrs_2 = ["168.192.3.0/24", "168.192.4.0/24"]
