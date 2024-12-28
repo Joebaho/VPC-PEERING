@@ -45,3 +45,18 @@ variable "mycount" {
   type        = number
   description = "index of the server launched"
 }
+#-------------------------key_name for west---------------------------
+variable "west_key_name" {
+  type        = string
+  description = "EC2 instance key_name"
+}
+#-------------------------key_name for aest---------------------------
+variable "east_key_name" {
+  type        = string
+  description = "EC2 instance key_name"
+}
+# variable declarations for the public key location
+variable "instance_type" {
+  type        = string
+  description = "EC2 instance type"
+}
