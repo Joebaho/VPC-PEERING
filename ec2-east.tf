@@ -16,7 +16,7 @@ resource "aws_instance" "server_east" {
   provider      = aws.region2
   ami           = data.aws_ami.amazon_linux_2.id
   instance_type = var.instance_type
-  #availability_zone      = data.aws_availability_zones.az_2
+  iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
   vpc_security_group_ids = [aws_security_group.east_web_sg.id]
   key_name               = var.east_key_name
   subnet_id              = aws_subnet.private2_subnet[0].id

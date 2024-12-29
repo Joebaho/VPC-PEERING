@@ -14,7 +14,7 @@ data "aws_ami" "amazon_linux_1" {
 resource "aws_instance" "west_server" {
   ami           = data.aws_ami.amazon_linux_1.id
   instance_type = var.instance_type
-  #availability_zone      = data.aws_availability_zones.az_1
+  iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
   vpc_security_group_ids = [aws_security_group.west_web_sg.id]
   key_name               = var.west_key_name
   subnet_id              = aws_subnet.private_subnet[0].id
